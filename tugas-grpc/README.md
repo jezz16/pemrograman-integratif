@@ -208,16 +208,20 @@ function deleteMahasiswa(id) {
 
 ```
 ## Tes Fungsi CRUD
+
 ### Create Mhs
 ![image](https://user-images.githubusercontent.com/99706251/229542562-73f31a23-12fe-40d8-aa45-24e80f182eab.png)
 ![image](https://user-images.githubusercontent.com/99706251/229543016-886e3b85-2601-45e2-aadc-dd100fcbc2b3.png)
 
+
 ### Read Mhs
 ![image](https://user-images.githubusercontent.com/99706251/229543213-f6daab8d-06ed-4346-a7f0-f513acab0478.png)
+
 
 ### Update & Read Mhs
 ![image](https://user-images.githubusercontent.com/99706251/229543397-b473d6c0-d314-427b-81f2-6d7f9c3dc845.png)
 ![image](https://user-images.githubusercontent.com/99706251/229543456-39c57beb-d105-489b-bd64-27dcbee1efa4.png)
+
 
 ### Delete Mhs
 ![image](https://user-images.githubusercontent.com/99706251/229543657-4f560074-3976-438a-8569-fcf7ce87052f.png)
