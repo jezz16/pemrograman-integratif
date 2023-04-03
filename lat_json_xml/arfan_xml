@@ -1,0 +1,32 @@
+<students>
+  <student>
+    <Student_ID>123</Student_ID>
+    <Name>Anna</Name>
+    <Date_of_Birth>10/02/2004</Date_of_Birth>
+    <Year>1</Year>
+  </student>
+  <student>
+    <Student_ID>99</Student_ID>
+    <Name>David</Name>
+    <Date_of_Birth>03/12/2001</Date_of_Birth>
+    <Year>3</Year>
+  </student>
+  <student>
+    <Student_ID>97</Student_ID>
+    <Name>John</Name>
+    <Date_of_Birth>05/10/2000</Date_of_Birth>
+    <Year>3</Year>
+  </student>
+  <student>
+    <Student_ID>87</Student_ID>
+    <Name>Rebeca</Name>
+    <Date_of_Birth>14/05/2000</Date_of_Birth>
+    <Year>4</Year>
+  </student>
+  <student>
+    <Student_ID>156</Student_ID>
+    <Name>Dean</Name>
+    <Date_of_Birth>20/08/2004</Date_of_Birth>
+    <Year>1</Year>
+  </student>
+</students>
