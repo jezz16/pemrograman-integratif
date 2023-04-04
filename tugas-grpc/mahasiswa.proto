@@ -5,6 +5,7 @@ package data;
 service MahasiswaData {
     rpc CreateMahasiswa (Mahasiswa) returns (Mahasiswa) {}
     rpc ReadMahasiswa (MahasiswaRequest) returns (Mahasiswa) {}
+    rpc ReadAllMahasiswa (Empty) returns (ListMahasiswa) {}
     rpc UpdateMahasiswa (Mahasiswa) returns (Mahasiswa) {}
     rpc DeleteMahasiswa (MahasiswaRequest) returns (Mahasiswa) {}
 }
@@ -19,3 +20,9 @@ message Mahasiswa {
 message MahasiswaRequest {
     int32 id = 1;
 }
+
+message ListMahasiswa {
+    repeated Mahasiswa mahasiswa = 1;
+}
+
+message Empty {}
