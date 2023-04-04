@@ -24,7 +24,7 @@ function createMahasiswa(call, callback) {
     if (err) throw err;
 
     user.id = result.insertId;
-    callback(null, "User created successfully");
+    callback(null, user);
   });
 }
 
@@ -39,6 +39,32 @@ function readMahasiswa(call, callback) {
   });
 }
 
+function readAllMahasiswa(call, callback) {
+  connection.query("SELECT * FROM users", (err, results) => {
+    if (err) throw err;
+
+    const mahasiswas = results.map((row) => {
+      const mahasiswa = {
+        id: row.id,
+        nama: row.nama,
+        alamat: row.alamat,
+        nilai: row.nilai,
+      };
+      return mahasiswa;
+    });
+
+    const response = {
+      mahasiswa: mahasiswas,
+    };
+
+    const listMahasiswa = {
+      mahasiswa: mahasiswas,
+    };
+
+    callback(null, listMahasiswa);
+  });
+}
+
 function updateMahasiswa(call, callback) {
   const user = call.request;
 
@@ -48,7 +74,7 @@ function updateMahasiswa(call, callback) {
     (err, result) => {
       if (err) throw err;
 
-      callback(null, "User updated successfully");
+      callback(null, user);
     }
   );
 }
@@ -68,6 +94,7 @@ function main() {
   server.addService(MahasiswaData.service, {
     CreateMahasiswa: createMahasiswa,
     ReadMahasiswa: readMahasiswa,
+    ReadAllMahasiswa: readAllMahasiswa,
     UpdateMahasiswa: updateMahasiswa,
     DeleteMahasiswa: deleteMahasiswa,
   });
