@@ -39,6 +39,19 @@ function readMahasiswa(id) {
   });
 }
 
+function readAllMahasiswa() {
+  client.ReadAllMahasiswa({}, (err, response) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    response.mahasiswa.forEach((mahasiswa) => {
+      console.log(mahasiswa);
+    });
+  });
+}
+
 function updateMahasiswa(id, nama, alamat, nilai) {
   const user = {
     id: id,
@@ -69,8 +82,9 @@ function deleteMahasiswa(id) {
 }
 
 // penggunaan fungsi CRUD
-// createMahasiswa("Alex", "Keputih", 85);
-// readMahasiswa(2);
-updateMahasiswa(2, "Jezz", "Gebang", 87);
-readMahasiswa(2);
+// createMahasiswa("masbro", "Keputih", 85);
+// readMahasiswa(1);
+// updateMahasiswa(1, "Jezz", "Gebang", 87);
+// readMahasiswa(1);
 // deleteMahasiswa(1);
+readAllMahasiswa();
